@@ -1,0 +1,99 @@
+.glavni-header {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Gornji red */
+  .top-bar {
+    background-color: #111;
+    color: white;
+    padding: 5px 20px;
+    text-align: right;
+  }
+  
+  .top-links .auth-button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .top-links .auth-button:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Donji red */
+  .main-bar {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .search-bar {
+    display: flex;
+    flex: 1;
+    margin: 0 20px;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .search-bar button {
+    background-color: #0056b3;
+    border: none;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+  }
+  
+  .nav-buttons .dodaj-button {
+    background-color: #fff;
+    color: #007bff;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .nav-buttons .dodaj-button:hover {
+    background-color: #e6e6e6;
+  }
+  
+  /* Navigacija */
+  .main-nav {
+    background-color: #222;
+    padding: 10px 20px;
+  }
+  
+  .main-nav a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+  }
+  
+  .main-nav a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  
+  
+  
+  

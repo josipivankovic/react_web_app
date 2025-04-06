@@ -1,0 +1,30 @@
+.kartica {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    transition: box-shadow 0.2s;
+  }
+  
+  .kartica:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .kartica img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  
+  .kartica .cijena {
+    font-weight: bold;
+    margin: 8px 0 4px 0;
+  }
+  
+  .kartica .lokacija {
+    font-size: 14px;
+    color: #666;
+  }
+  

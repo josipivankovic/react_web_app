@@ -1,0 +1,15 @@
+.prodavac-container {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .prodavac-container h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .prodavac-container p {
+    margin: 6px 0;
+  }
+  

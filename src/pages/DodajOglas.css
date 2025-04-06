@@ -1,0 +1,40 @@
+.dodaj-container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dodaj-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .dodaj-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .dodaj-container input,
+  .dodaj-container textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .dodaj-container button {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .dodaj-container button:hover {
+    background: #0056b3;
+  }
+  

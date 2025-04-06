@@ -1,0 +1,67 @@
+.galerija {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .glavna-slika-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .glavna-slika {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+  }
+  
+  .strelica {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .lijeva {
+    left: 10px;
+  }
+  
+  .desna {
+    right: 10px;
+  }
+  
+  .male-slike {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .mala-slika {
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s;
+    border: 2px solid transparent;
+  }
+  
+  .mala-slika.aktivna,
+  .mala-slika:hover {
+    opacity: 1;
+    border-color: #007bff;
+  }
+    

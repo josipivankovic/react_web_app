@@ -1,0 +1,26 @@
+.tehnicki-container {
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .tehnicki-container h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .tehnicki-container table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tehnicki-container td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tehnicki-container td:first-child {
+    font-weight: bold;
+    width: 40%;
+  }
+  
