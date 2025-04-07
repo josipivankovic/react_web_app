@@ -455,3 +455,12 @@ li {
     padding: 15px;
   }
 }
+
+
+.app-container {
+  max-width: 1600px;   /* još šire za veliki desktop */
+  margin: 0 auto;
+  padding: 1.5rem;     /* malo manji padding da zadrži ravnotežu */
+}
+
+

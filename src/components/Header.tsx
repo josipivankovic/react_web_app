@@ -27,6 +27,7 @@ const Header = () => {
         <Link to="/">Početna</Link>
         <Link to="/oglasi">Oglasi</Link>
         <Link to="/kontakt">Kontakt</Link>
+        <Link to="/pokemon">Pokemoni</Link> {/* OVDJE smo dodali novu stavku */}
       </nav>
 
       {/* MODAL */}
@@ -53,6 +54,7 @@ const Header = () => {
 };
 
 export default Header;
+
 
 
 
