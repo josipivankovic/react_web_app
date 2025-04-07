@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./GalerijaSlika.css";
 
-const slike = [
+const slike: string[] = [
   "/mini.jpg",
   //"/mini1.jpg",
   "/mini2.jpg",
@@ -11,14 +11,18 @@ const slike = [
 ];
 
 const GalerijaSlika = () => {
-  const [trenutnaSlika, setTrenutnaSlika] = useState(0);
+  const [trenutnaSlika, setTrenutnaSlika] = useState<number>(0);
 
   const prethodna = () => {
-    setTrenutnaSlika((prev) => (prev === 0 ? slike.length - 1 : prev - 1));
+    setTrenutnaSlika((prev: number) =>
+      prev === 0 ? slike.length - 1 : prev - 1
+    );
   };
 
   const sljedeca = () => {
-    setTrenutnaSlika((prev) => (prev === slike.length - 1 ? 0 : prev + 1));
+    setTrenutnaSlika((prev: number) =>
+      prev === slike.length - 1 ? 0 : prev + 1
+    );
   };
 
   return (

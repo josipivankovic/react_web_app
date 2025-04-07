@@ -1,4 +1,4 @@
-import React from "react";
+
 import GalerijaSlika from "../components/GalerijaSlika";
 import "../App.css";
 import SlicniOglasi from "../components/SlicniOglasi";
