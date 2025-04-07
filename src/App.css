@@ -458,9 +458,9 @@ li {
 
 
 .app-container {
-  max-width: 1600px;   /* još šire za veliki desktop */
+  max-width: 1600px;   
   margin: 0 auto;
-  padding: 1.5rem;     /* malo manji padding da zadrži ravnotežu */
+  padding: 1.5rem;     
 }
 
 
