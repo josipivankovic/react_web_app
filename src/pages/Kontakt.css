@@ -1,24 +1,65 @@
-.kontakt-stranica {
-    background-color: #f4f4f4;
-    padding: 25px;
-    border-radius: 10px;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #333;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  }
-  
-  .kontakt-stranica h2 {
-    margin-bottom: 15px;
-    color: #007bff;
-  }
-  
-  .kontakt-podaci {
-    margin: 20px 0;
-    padding: 15px;
-    background-color: #fff;
-    border-radius: 8px;
-    border-left: 4px solid #007bff;
-  }
-  
-  
+.kontakt-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.kontakt-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #0057b7;
+  text-align: center;
+}
+
+.kontakt-section {
+  margin-bottom: 2rem;
+}
+
+.kontakt-section h2,
+.kontakt-section h3 {
+  color: #0057b7;
+  margin-bottom: 0.5rem;
+}
+
+.kontakt-section p,
+.kontakt-section li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.kontakt-section ul {
+  list-style: square;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+}
+
+.kontakt-section a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+.kontakt-section a:hover {
+  text-decoration: underline;
+}
+
+.kontakt-cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #0057b7;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #003e8a;
+}

@@ -7,13 +7,14 @@ type Oglas = {
   lokacija: string;
   opis: string;
   slika: string;
+  kategorija: string; // ✅ Kategorija dodana
 };
 
 type OglasiContextType = {
   oglasi: Oglas[];
   dodajOglas: (oglas: Oglas) => void;
   obrisiOglas: (id: number) => void;
-  urediOglas: (id: number, noviNaziv: string) => void;
+  urediOglas: (id: number, noviPodaci: Partial<Oglas>) => void; // ✅ Ažurirano
 };
 
 const OglasiContext = createContext<OglasiContextType | undefined>(undefined);
@@ -21,7 +22,7 @@ const OglasiContext = createContext<OglasiContextType | undefined>(undefined);
 export const OglasiProvider = ({ children }: { children: ReactNode }) => {
   const [oglasi, setOglasi] = useState<Oglas[]>([]);
 
-  // ✅ Testni oglas za prvi put ako je prazno
+  // ✅ Testni oglas sa kategorijom
   const testniOglas: Oglas = {
     id: 1,
     naziv: "Testni Mini Cooper",
@@ -29,6 +30,7 @@ export const OglasiProvider = ({ children }: { children: ReactNode }) => {
     lokacija: "Split",
     opis: "Ovo je testni oglas koji se učita iz LocalStorage.",
     slika: "mini7.jpg",
+    kategorija: "Automobili",
   };
 
   // 🔁 Učitaj oglase iz LocalStorage
@@ -44,12 +46,11 @@ export const OglasiProvider = ({ children }: { children: ReactNode }) => {
         console.error("Greška u LocalStorage parsiranju:", e);
       }
     } else {
-      // Ako ništa nema, postavi testni oglas
       setOglasi([testniOglas]);
     }
   }, []);
 
-  // 💾 Spremi oglase u LocalStorage svaki put kad se promijene
+  // 💾 Spremi oglase svaki put kad se promijene
   useEffect(() => {
     localStorage.setItem("oglasi", JSON.stringify(oglasi));
   }, [oglasi]);
@@ -63,10 +64,10 @@ export const OglasiProvider = ({ children }: { children: ReactNode }) => {
     setOglasi((prev) => prev.filter((oglas) => oglas.id !== id));
   };
 
-  const urediOglas = (id: number, noviNaziv: string) => {
+  const urediOglas = (id: number, noviPodaci: Partial<Oglas>) => {
     setOglasi((prev) =>
       prev.map((oglas) =>
-        oglas.id === id ? { ...oglas, naziv: noviNaziv } : oglas
+        oglas.id === id ? { ...oglas, ...noviPodaci } : oglas
       )
     );
   };
@@ -87,5 +88,3 @@ export const useOglasi = () => {
   }
   return context;
 };
-
-

@@ -9,33 +9,36 @@ function DodajOglas() {
   const [lokacija, setLokacija] = useState("");
   const [opis, setOpis] = useState("");
   const [slika, setSlika] = useState("");
+  const [kategorija, setKategorija] = useState("Automobili");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     const noviOglas = {
-      id: Date.now(), // generira jedinstveni ID
+      id: Date.now(),
       naziv,
       cijena,
       lokacija,
       opis,
-      slika
+      slika,
+      kategorija,
     };
 
     dodajOglas(noviOglas);
     alert("Oglas dodan!");
 
-    // Resetiraj polja nakon dodavanja
+    // Reset
     setNaziv("");
     setCijena("");
     setLokacija("");
     setOpis("");
     setSlika("");
+    setKategorija("Automobili");
   };
 
   return (
     <div className="page-container">
-      <h2>Dodaj novi oglas</h2>
+      <h2 style={{ marginBottom: "20px" }}>Dodaj novi oglas</h2>
       <form
         onSubmit={handleSubmit}
         style={{
@@ -43,6 +46,10 @@ function DodajOglas() {
           flexDirection: "column",
           gap: "10px",
           maxWidth: "500px",
+          padding: "20px",
+          margin: "0 auto",
+          backgroundColor: "#f4f4f4",
+          borderRadius: "10px",
         }}
       >
         <input
@@ -70,12 +77,37 @@ function DodajOglas() {
           required
         />
         <input
-          placeholder="Slika (npr. mini8.jpg)"
+          placeholder="Slika (npr. mini7.jpg)"
           value={slika}
           onChange={(e) => setSlika(e.target.value)}
           required
         />
-        <button type="submit">Dodaj oglas</button>
+
+        {/* Dropdown za kategoriju */}
+        <select
+          value={kategorija}
+          onChange={(e) => setKategorija(e.target.value)}
+          required
+          style={{ padding: "8px" }}
+        >
+          <option value="Automobili">Automobili</option>
+          <option value="Motori">Motori</option>
+          <option value="Dijelovi">Dijelovi</option>
+          <option value="Ostalo">Ostalo</option>
+        </select>
+
+        <button
+          type="submit"
+          style={{
+            padding: "10px",
+            backgroundColor: "green",
+            color: "white",
+            border: "none",
+            borderRadius: "5px",
+          }}
+        >
+          Dodaj oglas
+        </button>
       </form>
     </div>
   );
