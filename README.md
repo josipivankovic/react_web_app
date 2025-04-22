@@ -1,54 +1,49 @@
-# React + TypeScript + Vite
+# AutoOglasi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AutoOglasi je moderna web aplikacija izrađena u Reactu i TypeScriptu, s ciljem prikaza funkcionalnog oglasnika kroz modularni dizajn, korisničko sučelje i upravljanje podacima.
 
-Currently, two official plugins are available:
+Aplikacija demonstrira napredne koncepte frontend razvoja kao što su komponentna arhitektura, routing, rad s obrascima, upravljanje stanjima i dohvat podataka s vanjskog API-ja.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tehnologije korištene
 
-## Expanding the ESLint configuration
+- React
+- TypeScript
+- React Router
+- CSS (custom styling)
+- Git & GitHub
+- REST API (pokemoni stranica)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Funkcionalnosti
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Prikaz oglasa (slike, opis, tehnički detalji, kontakt)
+- Dodavanje, uređivanje i brisanje oglasa
+- Kontakt forma za direktno kontaktiranje prodavača iz oglasa
+- Navigacija kroz višestruke rute (stranice)
+- Lažni gumbovi za prijavu i registraciju s iskačućim dijalozima
+- Responsive dizajn (desktop i mobilni prikaz)
+- Prikaz vanjskih podataka s API-ja (pokemoni)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Struktura aplikacije
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `Početna` – prikazuje najnoviji oglas i osnovne informacije
+- `Oglasi` – svi oglasi s mogućnošću uređivanja i brisanja
+- `Dodaj oglas` – forma za unos novih oglasa
+- `Kontakt` – stranica "O autoru" s informacijama o autoru i kontaktima
+- `Pokemoni` – demonstracija rada s REST API-jem (dohvat podataka s interneta)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## O autoru
+
+Moje ime je **Josip Ivanković**, frontend developer s fokusom na razvoj modernih web i mobilnih aplikacija.  
+U ovom projektu integriram praktična znanja iz Reacta i TypeScripta kroz stvarnu primjenu komponenti, upravljanja stanjima i API komunikacije.  
+Tehnologije poput Fluttera, Reacta i Gita svakodnevno koristim kroz osobne projekte,  
+a usmjeren sam na daljnji profesionalni rast u području **web developmenta**.
+
+## Kontakt
+
+- Email: [josipivankovicc13@gmail.com](mailto:josipivankovicc13@gmail.com)
+- GitHub: [github.com/josipivankovic](https://github.com/josipivankovic)
+- LinkedIn: [linkedin.com/in/josip-ivanković](https://www.linkedin.com/in/josip-ivanković-061324358/)
+
+---
+
+> Napomena: Aplikacija je izrađena u edukativne i prezentacijske svrhe.
