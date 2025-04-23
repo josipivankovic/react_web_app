@@ -19,7 +19,7 @@ const Header = () => {
         <input type="text" placeholder="Pretraži oglase..." />
         <div className="desno">
           <button>Pretraži</button>
-          <Link to="/oglasi"><button>Dodaj oglas</button></Link>
+          <Link to="/dodaj"><button>Dodaj oglas</button></Link>
         </div>
       </div>
 
@@ -27,10 +27,9 @@ const Header = () => {
         <Link to="/">Početna</Link>
         <Link to="/oglasi">Oglasi</Link>
         <Link to="/kontakt">Kontakt</Link>
-        <Link to="/pokemon">Pokemoni</Link> {/* OVDJE smo dodali novu stavku */}
+        <Link to="/pokemon">Pokemoni</Link>
       </nav>
 
-      {/* MODAL */}
       {modalType && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -54,10 +53,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
-
-
-
-
